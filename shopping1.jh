@@ -1,0 +1,20 @@
+
+entity PRODUCT {
+	code String required,
+    name String required,
+    price Double required
+}
+
+entity Customer {
+    code String required, 
+	firstname String required,
+    lastname  String required
+    
+}
+entity Order {
+            code String required,
+     }
+      relationship OneToMany{
+              Customer{order} to Order{customer} 
+      }
+    service all with serviceClass
